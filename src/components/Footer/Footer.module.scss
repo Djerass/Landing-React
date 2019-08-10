@@ -1,0 +1,67 @@
+@import "../../partial_styles/container";
+@import "../../partial_styles/vars";
+
+.footer {
+  background-color: $primary-color;
+  color: $light-color;
+  .container {
+    padding: 4rem 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 2rem;
+  }
+  .social i {
+    color: $light-color;
+    margin-left: 1rem;
+    margin-top: 1rem;
+  }
+  ul > li:first-child,
+  h4 {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  .form_group {
+    margin-top: 0.5rem;
+    input {
+      background-color: $secondary-color;
+      border: none;
+      padding: 0.5rem 0.6rem;
+      border-bottom-left-radius: 10px;
+      border-top-left-radius: 10px;
+      outline: none;
+      color: $light-color;
+    }
+    button {
+      border: none;
+      padding: 0.5rem 0.6rem;
+      border-bottom-right-radius: 10px;
+      border-top-right-radius: 10px;
+      cursor: pointer;
+      transition: color, background-color 500ms;
+      &:hover {
+        background-color: $primary-color;
+        color: $light-color;
+      }
+    }
+  }
+}
+
+@media (max-width: 850px) {
+  .footer {
+    .container {
+      grid-template-columns: repeat(2, 1fr);
+      justify-content: center;
+      text-align: center;
+    }
+  }
+}
+@media (max-width: 500px) {
+  .footer {
+    .container {
+      grid-template-columns: repeat(1, 1fr);
+      justify-content: center;
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+  }
+}

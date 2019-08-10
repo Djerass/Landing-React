@@ -1,0 +1,17 @@
+@import "./vars";
+
+.btn {
+  display: inline-block;
+  padding: 0.6rem 0.8rem;
+  border-radius: 20px;
+}
+
+.btn_primary {
+  background-color: $primary-color;
+  color: $light-color;
+  transition: background-color,color 500ms;
+  &:hover {
+    background-color: $light-color;
+    color: $primary-color;
+  }
+}

@@ -1,0 +1,26 @@
+@import "../../partial_styles/container";
+@import "../../partial_styles/vars";
+
+.navbar {
+  .container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 2rem;
+  }
+  .logo {
+    text-align: left;
+  }
+  .menu {
+    justify-self: flex-end;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    a {
+      margin: 0 1rem;
+      transition: color 500ms;
+      &:hover {
+        color: $light-color;
+      }
+    }
+  }
+}

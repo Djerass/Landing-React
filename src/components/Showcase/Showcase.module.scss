@@ -1,0 +1,37 @@
+@import "../../partial_styles/container";
+@import "../../partial_styles/vars";
+@import "../../partial_styles/btn";
+
+.showcase {
+  margin: 2rem 0;
+  .container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 3rem;
+    justify-content: center;
+    align-items: center;
+    .content {
+      text-align: left;
+      h2 {
+        font-size: 4rem;
+        color: $primary-color;
+      }
+      .btn {
+        margin-top: 1rem;
+      }
+    }
+  }
+}
+@media (max-width: 768px) {
+  .showcase {
+    .container {
+      grid-template-columns: repeat(1, 1fr);
+      .content {
+        text-align: center;
+        h2 {
+          font-size: 3rem;
+        }
+      }
+    }
+  }
+}

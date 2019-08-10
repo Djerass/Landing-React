@@ -1,0 +1,54 @@
+@import "../../partial_styles/container";
+@import "../../partial_styles/vars";
+
+.about {
+  height: 600px;
+  .about_inner {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: $overlay-color;
+    position: relative;
+    color: $light-color;
+    padding: 2rem;
+    text-align: center;
+    h4 {
+      font-size: 2rem;
+    }
+    h1 {
+      font-size: 4rem;
+      margin: 1rem 0;
+    }
+    p {
+      font-size: 1.5rem;
+    }
+    &:before {
+      position: absolute;
+      content: "";
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background: url("../../images/about.jpg") no-repeat bottom center/cover;
+      z-index: -1;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .about {
+    .about_inner {
+      h1 {
+        font-size: 2rem;
+      }
+      h4 {
+        font-size: 1.5rem;
+      }
+      p {
+        font-size: 1.3rem;
+      }
+    }
+  }
+}
